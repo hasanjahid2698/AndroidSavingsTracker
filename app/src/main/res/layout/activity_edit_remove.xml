@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    android:weightSum="8"
+    tools:context=".EditRemoveActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_edit_remove_activity"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorToolBar"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+
+    <LinearLayout
+        android:layout_weight="8"
+        android:weightSum="8"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:weightSum="8"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:layout_marginTop="90dp">
+
+            <TextView
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:layout_marginTop="7dp"
+                android:text="@string/DateText"
+                android:textSize="24sp"
+                android:textColor="@color/colorWhite"
+                android:textAlignment="textEnd"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/DateEditTextERAId"
+                android:layout_weight="5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:textSize="22sp"
+                android:background="@drawable/custom_edittext_style"
+                android:editable="false"
+                android:focusable="false"
+                android:clickable="true"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:weightSum="8"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:layout_marginTop="7dp"
+                android:text="@string/CategoryText"
+                android:textSize="24sp"
+                android:textColor="@color/colorWhite"
+                android:textAlignment="viewEnd"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/CategoryEditTextERAId"
+                android:layout_weight="5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:textSize="22sp"
+                android:background="@drawable/custom_edittext_style"
+                android:editable="false"
+                android:focusable="false"
+                android:clickable="true"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:weightSum="8"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:padding="5dp"
+                android:layout_marginTop="7dp"
+                android:text="@string/AmountText"
+                android:textSize="24sp"
+                android:textColor="@color/colorWhite"
+                android:textAlignment="textEnd"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:id="@+id/AmountEditTextERAId"
+                android:layout_weight="5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:textSize="22sp"
+                android:background="@drawable/custom_edittext_style"
+                android:inputType="numberDecimal"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

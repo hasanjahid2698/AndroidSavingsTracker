@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:background="#302c2c"
+android:weightSum="9"
+tools:context=".BarActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_Bar_Activity"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorToolBar"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+<LinearLayout
+    android:background="#302c2c"
+    android:orientation="horizontal"
+    android:gravity="center"
+    android:layout_weight="1"
+    android:layout_width="match_parent"
+    android:layout_height="0dp">
+
+    <ImageButton
+        android:id="@+id/LeftArrowImageButtonId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_left_arrow_white"
+        android:background="#302c2c"
+        />
+
+    <TextView
+        android:id="@+id/YearTextViewId"
+        android:layout_width="65dp"
+        android:layout_height="match_parent"
+        android:background="#302c2c"
+        android:textColor="@color/colorWhite"
+        android:text="2019"
+        android:gravity="center"
+        android:textSize="22sp"
+        android:textStyle="bold"/>
+
+    <ImageButton
+        android:id="@+id/RightArrowImageButtonId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_right_arrow_white"
+        android:background="#302c2c"
+        />
+
+
+
+
+</LinearLayout>
+
+<LinearLayout
+    android:layout_weight="4"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:paddingBottom="8dp">
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/IncomeBarChartId"
+        android:layout_width="match_parent"
+        android:background="#FFFFFF"
+        android:layout_height="match_parent">
+
+    </com.github.mikephil.charting.charts.BarChart>
+
+</LinearLayout>
+
+<LinearLayout
+    android:layout_weight="4"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:paddingBottom="8dp">
+
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/ExpenseBarChartId"
+        android:layout_width="match_parent"
+        android:background="#ffffff"
+        android:layout_height="match_parent">
+
+    </com.github.mikephil.charting.charts.BarChart>
+
+</LinearLayout>
+
+
+</LinearLayout>

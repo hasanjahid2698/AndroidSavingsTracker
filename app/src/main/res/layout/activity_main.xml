@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:weightSum="8">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/toolbar_main_activity"
+        android:background="@color/colorToolBar"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        />
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <ImageButton
+            android:id="@+id/MenuOptionButtonId"
+            android:layout_width="32dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_menu"
+            android:background="@null"
+            android:layout_marginLeft="10dp"/>
+
+        <ImageButton
+            android:id="@+id/LeftArrowButtonId"
+            android:layout_width="32dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_left_arrow"
+            android:background="@null"/>
+
+        <TextView
+            android:id="@+id/SelectedDateTextViewId"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:text="@string/sample_date"
+            />
+
+        <ImageButton
+            android:id="@+id/RightArrowButtonId"
+            android:layout_width="32dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_right_arrow"
+            android:background="@null"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/SpendingInfoButtonId"
+            android:layout_weight="1"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/custom_button_style"
+            android:text="@string/SpendingButton"
+            android:textSize="20dp"
+            android:textColor="@color/colorBackground"
+            android:layout_marginRight="2dp"
+            android:layout_marginLeft="5dp"
+
+            />
+
+        <Button
+            android:id="@+id/TransactionInfoButtonId"
+            android:layout_weight="1"
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/custom_button_style"
+            android:text="@string/TransactionButton"
+            android:textColor="@color/colorBackground"
+            android:textSize="20dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="2dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_weight="6"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+        <fragment
+            android:name="com.example.ubuntu.newnew.SpendingInfoFragment"
+            android:id="@+id/FragmentId"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout="@layout/fragment_spending_info">
+
+
+        </fragment>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>

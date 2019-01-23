@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:background="@color/colorBackground"
+    tools:context=".SpendingInfoFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <LinearLayout
+            android:layout_weight="8"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/IncomeTotalTextViewId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/IncomeTotalText"
+                android:textColor="@color/colorWhite"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/ExpenseTotalTextViewId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ExpenseTotalText"
+                android:textColor="@color/colorWhite"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/LineDividerId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/DividerText"
+                android:textColor="@color/colorWhite"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/BalanceTotalTextViewId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/BalanceTotalText"
+                android:textColor="@color/colorWhite"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_weight="2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <Button
+                android:id="@+id/AddIncomeButtonId"
+                android:layout_width="115dp"
+                android:layout_height="45dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/custom_button_style"
+                android:text="@string/IncomeAddButtonText"
+                android:textSize="20sp"
+                android:textColor="@color/colorBackground"
+                />
+
+            <Button
+                android:id="@+id/AddExpenseButtonId"
+                android:layout_width="115dp"
+                android:layout_height="45dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="5dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/custom_button_style"
+                android:text="@string/ExpenseAddButtonText"
+                android:textSize="20sp"
+                android:textColor="@color/colorBackground"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Savings Tracker</string>
+    <string name="profile">Profile</string>
+    <string name="graphs">Graphs</string>
+    <string name="bar">Bar</string>
+    <string name="pie">Pie</string>
+    <string name="others">Others</string>
+    <string name="settings">Settings</string>
+    <string name="credits">Credits</string>
+    <string name="log_out">Log Out</string>
+    <string name="open_drawer">Open Drawer</string>
+    <string name="close_drawer">Close Drawer</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="IncomeTotalText">Income</string>
+    <string name="ExpenseTotalText">Expense</string>
+    <string name="BalanceTotalText">Balance</string>
+    <string name="IncomeAddButtonText">+ Income</string>
+    <string name="ExpenseAddButtonText">+ Expense</string>
+    <string name="sample_date">12 Jan 2019</string>
+    <string name="SpendingButton">Spending</string>
+    <string name="TransactionButton">Transaction</string>
+    <string name="DividerText">------------------------------</string>
+    <string name="DateText">Date :</string>
+    <string name="CategoryText">Category :</string>
+    <string name="AmountText">Amount :</string>
+</resources>

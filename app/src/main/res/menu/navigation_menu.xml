@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:title="@string/profile"
+            android:id="@+id/profile_id"
+            android:icon="@drawable/ic_profile">
+        </item>
+    </group>
+
+    <item android:title="@string/graphs">
+        <menu>
+            <item
+                android:title="@string/bar"
+                android:id="@+id/Bar_id"
+                android:icon="@drawable/ic_bar">
+
+            </item>
+            <item
+                android:title="@string/pie"
+                android:id="@+id/Pie_id"
+                android:icon="@drawable/ic_pie">
+
+            </item>
+        </menu>
+    </item>
+
+    <item android:title="@string/others">
+        <menu>
+            <item
+                android:title="@string/settings"
+                android:id="@+id/setting_id"
+                android:icon="@drawable/ic_setting">
+
+            </item>
+            <item
+                android:title="@string/log_out"
+                android:id="@+id/log_out_id"
+                android:icon="@drawable/ic_log_out">
+
+            </item>
+            <item
+                android:title="@string/credits"
+                android:id="@+id/credits_id"
+                android:icon="@drawable/ic_credits">
+
+            </item>
+        </menu>
+    </item>
+</menu>

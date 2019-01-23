@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorToolBar">#008577</color>
+    <color name="colorBackground">#302c2c</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorCadetBlue">#5F9EA0</color>
+    <color name="colordivider">#436e70</color>
+    <color name="IncomeBarColor">#006e62</color>
+    <color name="ExpenseBarColor">#680604</color>
+</resources>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:padding="5dp"
+    android:background="@color/colorBackground">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentLeft="true">
+
+        <TextView
+            android:id="@+id/categoryTextViewId"
+            android:layout_width="150dp"
+            android:layout_height="32dp"
+            android:textSize="22sp"
+            android:textColor="@color/colorWhite"
+            android:text="Salary"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="13dp"/>
+
+        <TextView
+            android:id="@+id/DateTextViewId"
+            android:layout_width="150dp"
+            android:layout_height="28dp"
+            android:textSize="18sp"
+            android:textColor="@color/colorWhite"
+            android:text="12 Jan 2018"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="50dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_alignParentRight="true"
+        android:id="@+id/AmountTextViewId"
+        android:layout_width="130dp"
+        android:layout_height="28dp"
+        android:textSize="25sp"
+        android:textColor="@color/colorWhite"
+        android:textAlignment="viewEnd"
+        android:text="5000.00 "
+        tools:layout_editor_absoluteX="265dp"
+        tools:layout_editor_absoluteY="32dp" />
+
+</RelativeLayout>
