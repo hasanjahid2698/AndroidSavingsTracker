@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@color/colorWhite"
+    tools:context=".Sign_Up_page">
+
+    <EditText
+        android:id="@+id/usernameEditText"
+        android:layout_marginTop="10dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:hint="UserName"
+        android:textColorHint="#55c3f2"
+        android:background="@drawable/custom_edittext_style"
+        />
+
+
+    <EditText
+        android:id="@+id/fathernameEditText"
+        android:layout_marginTop="10dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:background="@drawable/custom_edittext_style"
+        android:hint="Father Name"
+        android:textColorHint="#55c3f2"
+
+        />
+
+    <EditText
+        android:id="@+id/phonenuberEditText"
+        android:layout_marginTop="10dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:hint="Phone Number"
+        android:inputType="number"
+        android:gravity="center"
+        android:background="@drawable/custom_edittext_style"
+        android:textColorHint="#55c3f2"
+        />
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_marginTop="10dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:background="@drawable/custom_edittext_style"
+        android:gravity="center"
+        android:textColorHint="#55c3f2"
+
+        />
+    <EditText
+        android:id="@+id/ConfirmpasswordEditText"
+        android:layout_marginTop="10dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:hint="Confirm Password"
+        android:clickable="true"
+        android:inputType="textPassword"
+        android:background="@drawable/custom_edittext_style"
+        android:gravity="center"
+        android:textColorHint="#55c3f2"
+
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp">
+        <Button
+            android:id="@+id/SignUpID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:background="@drawable/custom_button_style"
+            />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/donetext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textColor="#bc59d2"
+        />
+
+
+
+
+</LinearLayout>

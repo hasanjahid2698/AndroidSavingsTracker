@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#302c2c"
+    android:weightSum="9"
     tools:context=".PieActivity">
 
 
@@ -13,5 +17,76 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorToolBar"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <LinearLayout
+        android:background="#302c2c"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+        <ImageButton
+            android:id="@+id/PieLeftArrowImageButtonId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_left_arrow_white"
+            android:background="#302c2c"
+            />
+
+        <TextView
+            android:id="@+id/PieYearTextViewId"
+            android:layout_width="65dp"
+            android:layout_height="match_parent"
+            android:background="#302c2c"
+            android:textColor="@color/colorWhite"
+            android:text="2019"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:textStyle="bold"/>
+
+        <ImageButton
+            android:id="@+id/PieRightArrowImageButtonId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_right_arrow_white"
+            android:background="#302c2c"
+            />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_weight="4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingBottom="8dp">
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/IncomePieChartId"
+            android:layout_width="match_parent"
+            android:background="#FFFFFF"
+            android:layout_height="match_parent"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingBottom="8dp">
+
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/ExpensePieChartId"
+            android:layout_width="match_parent"
+            android:background="#ffffff"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+
+
 
 </LinearLayout>
