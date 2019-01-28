@@ -1,6 +1,6 @@
 package com.example.ubuntu.newnew;
 
-//hi from androidgithub
+//hi from jahid
 
 import android.content.DialogInterface;
 import android.content.Intent;
