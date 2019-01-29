@@ -17,6 +17,9 @@
         android:id="@+id/navigation_view"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
+        app:itemIconTint="#3ECDDA"
+        android:background="@color/colorToolBar"
+        app:itemTextColor="@color/colorWhite"
         app:headerLayout="@layout/navigationbar_header"
         app:menu="@menu/navigation_menu">
 

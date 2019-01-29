@@ -6,9 +6,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@color/colorWhite"
+    android:background="@drawable/b2"
     tools:context=".Sign_Up_page">
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/b3"/>
     <EditText
         android:id="@+id/usernameEditText"
         android:layout_marginTop="10dp"
@@ -78,9 +82,11 @@
         android:layout_marginTop="10dp">
         <Button
             android:id="@+id/SignUpID"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:text="Sign Up"
+            android:backgroundTint="#50A1E9"
+            android:textColor="@color/colorWhite"
             android:background="@drawable/custom_button_style"
             />
     </LinearLayout>

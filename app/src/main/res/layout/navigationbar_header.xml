@@ -7,7 +7,7 @@
     android:padding="16dp"
     android:gravity="bottom"
     android:theme="@style/ThemeOverlay.AppCompat.Dark"
-    android:background="#008577"
+    android:background="@color/colorBackground"
     >
 
     <de.hdodenhof.circleimageview.CircleImageView
@@ -15,13 +15,12 @@
         android:layout_height="56dp"
         android:src="@drawable/user"
         android:scaleType="centerCrop"
-
         />
-
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Md. Jahid Hasan"
+        android:text="Md.Jahid Hasan"
         android:paddingTop="8dp"
+        android:textColor="@color/colorWhite"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
 </LinearLayout>
