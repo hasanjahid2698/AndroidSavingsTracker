@@ -36,7 +36,7 @@
         android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:text="Log In"
-        android:backgroundTint="#50A1E9"
+        android:backgroundTint="@color/buttonBackGround"
         android:textColor="@color/colorWhite"
         android:background="@drawable/custom_button_style"
 

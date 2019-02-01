@@ -33,6 +33,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     DrawerLayout drawerLayout;
     NavigationView navigationView;
 
+    public static MainActivity mainActivity;
+
     private Button SpendingButton, TransactionButton;
     DatabaseHelper databaseHelper;
     private ImageButton addImageButton,minusImageButton,optionImageButton;
@@ -52,6 +54,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         selectedFragment=1;
+        mainActivity = this;
         super.onCreate(savedInstanceState);
         setContentView(R.layout.navigation_drawer);
         toolbar = findViewById(R.id.toolbar_main_activity);

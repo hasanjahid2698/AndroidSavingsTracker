@@ -239,6 +239,18 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 new String[] { Integer.toString(id) });
     }
 
+    public void deleteAllData(){
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        sqLiteDatabase.execSQL("DELETE FROM "+TABLE_NAME);
+        sqLiteDatabase.close();
+    }
+
+    public void deleteAllUser(){
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        sqLiteDatabase.execSQL("DELETE FROM "+TABLE_USER_NAME);
+        sqLiteDatabase.close();
+    }
+
     public ArrayList <ListCollection> listfromdbondate() {
         SQLiteDatabase db = this.getReadableDatabase();
         ArrayList<ListCollection> results = new ArrayList<ListCollection>();

@@ -10,4 +10,5 @@
     <color name="colordivider">#436e70</color>
     <color name="IncomeBarColor">#006e62</color>
     <color name="ExpenseBarColor">#680604</color>
+    <color name="buttonBackGround">#50A1E9</color>
 </resources>

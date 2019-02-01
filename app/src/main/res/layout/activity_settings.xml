@@ -4,13 +4,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
+    android:background="@color/colorBackground"
+    android:orientation="vertical"
     tools:context=".SettingsActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Setting Activity"
-        android:textSize="25sp"/>
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:id="@+id/toolbar_setting_activity"
+        android:background="@color/colorToolBar"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
 
+
+        <Button
+            android:id="@+id/ClearDataButtonId"
+            android:layout_width="260dp"
+            android:layout_height="60dp"
+            android:textAllCaps="false"
+            android:text="@string/clearButtontext"
+            android:textSize="18sp"
+            android:textColor="@color/colorBackground"
+            android:background="@drawable/custom_button_style"/>
+        <Button
+            android:id="@+id/ClearIncomeButtonId"
+            android:layout_width="260dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="false"
+            android:text="@string/clearIncomeButtontext"
+            android:textSize="18sp"
+            android:textColor="@color/colorBackground"
+            android:background="@drawable/custom_button_style"/>
+
+        <Button
+            android:id="@+id/ClearExpenseButtonId"
+            android:layout_width="260dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="false"
+            android:text="@string/clearExpenseButtontext"
+            android:textSize="18sp"
+            android:textColor="@color/colorBackground"
+            android:background="@drawable/custom_button_style"/>
+        <Button
+            android:id="@+id/ClearUserButtonId"
+            android:layout_width="260dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:textAllCaps="false"
+            android:text="@string/clearUserButtontext"
+            android:textSize="18sp"
+            android:textColor="@color/colorBackground"
+            android:background="@drawable/custom_button_style"/>
+
+
+    </LinearLayout>
 </LinearLayout>

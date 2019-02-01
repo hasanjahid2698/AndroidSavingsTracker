@@ -73,12 +73,12 @@ public class TypeSelectionActivity extends AppCompatActivity {
     private void ListViewSetAdapter(){
 
         if(value == 1){
-            IncomeArrayList = Preferences.getArrayPrefs("IncomeList",TypeSelectionActivity.this);
+            IncomeArrayList = Preferences.getArrayPrefsAll("IncomeList",TypeSelectionActivity.this);
 //            customAdapterForType = new CustomAdapterForType(TypeSelectionActivity.this,IncomeArrayList);
             arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,IncomeArrayList);
         }
         else if(value == -1){
-            ExpenseArrayList = Preferences.getArrayPrefs("ExpenseList",TypeSelectionActivity.this);
+            ExpenseArrayList = Preferences.getArrayPrefsAll("ExpenseList",TypeSelectionActivity.this);
 //            customAdapterForType = new CustomAdapterForType(TypeSelectionActivity.this,ExpenseArrayList);
             arrayAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,ExpenseArrayList);
 
@@ -129,11 +129,11 @@ public class TypeSelectionActivity extends AppCompatActivity {
 //                            Toast.makeText(TypeSelectionActivity.this, msg, Toast.LENGTH_SHORT).show();
                             if(value == 1){
                                 IncomeArrayList.set(position,msg);
-                                Preferences.setArrayPrefs("IncomeList",IncomeArrayList,TypeSelectionActivity.this);
+                                Preferences.setArrayPrefsAll("IncomeList",IncomeArrayList,TypeSelectionActivity.this);
                             }
                             else if(value == -1){
                                 ExpenseArrayList.set(position,msg);
-                                Preferences.setArrayPrefs("ExpenseList",ExpenseArrayList,TypeSelectionActivity.this);
+                                Preferences.setArrayPrefsAll("ExpenseList",ExpenseArrayList,TypeSelectionActivity.this);
 
                             }
 
@@ -150,12 +150,12 @@ public class TypeSelectionActivity extends AppCompatActivity {
                     public void onClick(DialogInterface dialog, int which) {
                         if (value == 1){
                             IncomeArrayList.remove(position);
-                            Preferences.setArrayPrefs("IncomeList",IncomeArrayList,TypeSelectionActivity.this);
+                            Preferences.setArrayPrefsAll("IncomeList",IncomeArrayList,TypeSelectionActivity.this);
 
                         }
                         else if( value == -1){
                             ExpenseArrayList.remove(position);
-                            Preferences.setArrayPrefs("ExpenseList",ExpenseArrayList,TypeSelectionActivity.this);
+                            Preferences.setArrayPrefsAll("ExpenseList",ExpenseArrayList,TypeSelectionActivity.this);
 
                         }
                         arrayAdapter.notifyDataSetChanged();
@@ -216,11 +216,11 @@ public class TypeSelectionActivity extends AppCompatActivity {
 
                         if(value == 1){
                             IncomeArrayList.add(msg);
-                            Preferences.setArrayPrefs("IncomeList",IncomeArrayList,TypeSelectionActivity.this);
+                            Preferences.setArrayPrefsAll("IncomeList",IncomeArrayList,TypeSelectionActivity.this);
                         }
                         else if(value == -1){
                             ExpenseArrayList.add(msg);
-                            Preferences.setArrayPrefs("ExpenseList",ExpenseArrayList,TypeSelectionActivity.this);
+                            Preferences.setArrayPrefsAll("ExpenseList",ExpenseArrayList,TypeSelectionActivity.this);
 
                         }
 

@@ -3,6 +3,8 @@ package com.example.ubuntu.newnew;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
@@ -31,6 +33,25 @@ public class Preferences {
 
     public static ArrayList<String> getArrayPrefs(String arrayName, Context mContext) {
         SharedPreferences prefs = mContext.getSharedPreferences("preferencename", 0);
+        int size = prefs.getInt(arrayName + "_size", 0);
+        ArrayList<String> array = new ArrayList<>(size);
+        for(int i=0;i<size;i++)
+            array.add(prefs.getString(arrayName + "_" + i, null));
+        return array;
+    }
+
+    public static void setArrayPrefsAll(String arrayName, ArrayList<String> array, Context mContext) {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(mContext);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putInt(arrayName +"_size", array.size());
+        for(int i=0;i<array.size();i++)
+            editor.putString(arrayName + "_" + i, array.get(i));
+        editor.commit();
+    }
+
+    public static ArrayList<String> getArrayPrefsAll(String arrayName, Context mContext) {
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(mContext);
+        SharedPreferences.Editor editor= prefs.edit();
         int size = prefs.getInt(arrayName + "_size", 0);
         ArrayList<String> array = new ArrayList<>(size);
         for(int i=0;i<size;i++)

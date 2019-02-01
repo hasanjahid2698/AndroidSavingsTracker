@@ -25,4 +25,8 @@
     <string name="DateText">Date :</string>
     <string name="CategoryText">Category :</string>
     <string name="AmountText">Amount :</string>
+    <string name="clearButtontext">Clear All Data</string>
+    <string name="clearIncomeButtontext">Clear All Income List</string>
+    <string name="clearExpenseButtontext">Clear All Expense List</string>
+    <string name="clearUserButtontext">Remove User</string>
 </resources>
