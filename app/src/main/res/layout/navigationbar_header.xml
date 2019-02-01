@@ -10,17 +10,19 @@
     android:background="@color/colorBackground"
     >
 
-    <de.hdodenhof.circleimageview.CircleImageView
-        android:layout_width="56dp"
-        android:layout_height="56dp"
-        android:src="@drawable/user"
-        android:scaleType="centerCrop"
-        />
+    <!--<de.hdodenhof.circleimageview.CircleImageView-->
+        <!--android:layout_width="56dp"-->
+        <!--android:layout_height="56dp"-->
+        <!--android:src="@drawable/user"-->
+        <!--android:scaleType="centerCrop"-->
+        <!--/>-->
     <TextView
+        android:id="@+id/navigationBarNameTextViewId"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Md.Jahid Hasan"
-        android:paddingTop="8dp"
+        android:text="Savings Tracker"
+        android:textSize="24sp"
+        android:paddingBottom="10dp"
         android:textColor="@color/colorWhite"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
 </LinearLayout>

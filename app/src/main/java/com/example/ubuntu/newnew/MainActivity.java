@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private Button SpendingButton, TransactionButton;
     DatabaseHelper databaseHelper;
     private ImageButton addImageButton,minusImageButton,optionImageButton;
-    private TextView dateTextView;
+    private TextView dateTextView,navigationbarUsernameEditText;
     private static int selectedFragment;
     private static String selectedDate;
 
@@ -65,11 +65,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         drawerLayout = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.navigation_view);
         navigationView.setNavigationItemSelectedListener(this);
-
+        navigationbarUsernameEditText = findViewById(R.id.navigationBarNameTextViewId);
         ActionBarDrawerToggle toggle  = new ActionBarDrawerToggle(this,drawerLayout,toolbar,R.string.open_drawer,R.string.close_drawer);
         drawerLayout.setDrawerListener(toggle);
 
         toggle.syncState();
+
+//        navigationbarUsernameEditText.setText("");
 
 
         SpendingButton = findViewById(R.id.SpendingInfoButtonId);
