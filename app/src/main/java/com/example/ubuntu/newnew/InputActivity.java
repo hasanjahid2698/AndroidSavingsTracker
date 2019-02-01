@@ -4,6 +4,7 @@ import android.app.DatePickerDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.database.sqlite.SQLiteDatabase;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -133,21 +134,27 @@ public class InputActivity extends AppCompatActivity {
 
         }
         else if (id == R.id.doneId){
-            int selectedOption;
-            String selectedDate, selectedCategory;
-            Double selectedAmount;
-            selectedOption = value;
-            selectedDate = DateEditText.getText().toString();
-            selectedCategory = CategoryEditText.getText().toString();
-            selectedAmount = Double.parseDouble(AmountEditText.getText().toString());
+            if(DateEditText.getText().toString().length()==0 || CategoryEditText.getText().toString().length()==0 || AmountEditText.getText().toString().length()==0){
+                Intent resultIntent = new Intent();
+                setResult(RESULT_CANCELED,resultIntent);
+            }
+            else{
+                int selectedOption;
+                String selectedDate, selectedCategory;
+                Double selectedAmount;
+                selectedOption = value;
+                selectedDate = DateEditText.getText().toString();
+                selectedCategory = CategoryEditText.getText().toString();
+                selectedAmount = Double.parseDouble(AmountEditText.getText().toString());
 
-            Boolean inserted = databaseHelper.insertData(selectedOption,selectedDate,selectedCategory,selectedAmount);
+                Boolean inserted = databaseHelper.insertData(selectedOption,selectedDate,selectedCategory,selectedAmount);
 
-            if(inserted) Toast.makeText(InputActivity.this, "Data is inserted", Toast.LENGTH_SHORT).show();
+                if(inserted) Toast.makeText(InputActivity.this, "Data is inserted", Toast.LENGTH_SHORT).show();
 
-            Intent resultIntent = new Intent();
-            setResult(RESULT_OK,resultIntent);
+                Intent resultIntent = new Intent();
+                setResult(RESULT_OK,resultIntent);
 
+            }
             finish();
 
         }

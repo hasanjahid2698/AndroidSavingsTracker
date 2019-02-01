@@ -75,6 +75,9 @@ public class SpendingInfoFragment extends Fragment {
             if(resultCode == Activity.RESULT_OK){
                 AddInfoText();
             }
+            else if (resultCode == Activity.RESULT_CANCELED){
+                AddInfoText();
+            }
         }
     }
 

@@ -3,6 +3,7 @@ package com.example.ubuntu.newnew;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -118,19 +119,28 @@ public class TypeSelectionActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         msg = input.getText().toString();
+                        if(msg.length()==0){
+                            View parentLayout = findViewById(android.R.id.content);
+                            Snackbar.make(parentLayout,"Empty input is not allowed",Snackbar.LENGTH_LONG).show();
+                            return;
+                        }
+                        else{
 
 //                            Toast.makeText(TypeSelectionActivity.this, msg, Toast.LENGTH_SHORT).show();
-                        if(value == 1){
-                            IncomeArrayList.set(position,msg);
-                            Preferences.setArrayPrefs("IncomeList",IncomeArrayList,TypeSelectionActivity.this);
-                        }
-                        else if(value == -1){
-                            ExpenseArrayList.set(position,msg);
-                            Preferences.setArrayPrefs("ExpenseList",ExpenseArrayList,TypeSelectionActivity.this);
+                            if(value == 1){
+                                IncomeArrayList.set(position,msg);
+                                Preferences.setArrayPrefs("IncomeList",IncomeArrayList,TypeSelectionActivity.this);
+                            }
+                            else if(value == -1){
+                                ExpenseArrayList.set(position,msg);
+                                Preferences.setArrayPrefs("ExpenseList",ExpenseArrayList,TypeSelectionActivity.this);
 
+                            }
+
+                            arrayAdapter.notifyDataSetChanged();
                         }
 
-                        arrayAdapter.notifyDataSetChanged();
+
 
                     }
                 });
