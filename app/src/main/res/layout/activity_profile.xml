@@ -1,9 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@color/colorBackground"
+    android:weightSum="8"
     tools:context=".ProfileActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar_profile_activity"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/colorToolBar"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/usernameProfileEditText"
+            android:layout_marginTop="10dp"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:hint="UserName"
+            android:textColorHint="#55c3f2"
+            android:background="@drawable/custom_edittext_style"
+            />
+
+
+        <EditText
+            android:id="@+id/fathernameProfileEditText"
+            android:layout_marginTop="10dp"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:background="@drawable/custom_edittext_style"
+            android:hint="Father Name"
+            android:textColorHint="#55c3f2"
+
+            />
+
+        <EditText
+            android:id="@+id/phonenumberProfileEditText"
+            android:layout_marginTop="10dp"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:hint="Phone Number"
+            android:inputType="number"
+            android:gravity="center"
+            android:background="@drawable/custom_edittext_style"
+            android:textColorHint="#55c3f2"
+            />
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="@string/ProfilePasswordDivider"
+            android:textColor="#55c3f2"
+            android:textStyle="italic"
+            android:gravity="bottom|center_horizontal"
+            android:textSize="18sp"
+            />
+        <EditText
+            android:id="@+id/passwordProfileEditText"
+            android:layout_marginTop="10dp"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:background="@drawable/custom_edittext_style"
+            android:gravity="center"
+            android:textColorHint="#55c3f2"
+
+            />
+        <EditText
+            android:id="@+id/ConfirmpasswordProfileEditText"
+            android:layout_marginTop="10dp"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:hint="Confirm Password"
+            android:clickable="true"
+            android:inputType="textPassword"
+            android:background="@drawable/custom_edittext_style"
+            android:gravity="center"
+            android:textColorHint="#55c3f2"
+
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

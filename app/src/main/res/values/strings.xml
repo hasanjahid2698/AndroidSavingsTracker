@@ -29,4 +29,5 @@
     <string name="clearIncomeButtontext">Clear All Income List</string>
     <string name="clearExpenseButtontext">Clear All Expense List</string>
     <string name="clearUserButtontext">Remove User</string>
+    <string name="ProfilePasswordDivider">Change Your Password</string>
 </resources>

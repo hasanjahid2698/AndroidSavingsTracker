@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public class SettingsActivity extends AppCompatActivity {
 
-    private Button clearDataButton, clearIncomeButton, clearExpenseButton, removeUserButton;
+    private Button clearDataButton, clearIncomeButton, clearExpenseButton;
     DatabaseHelper databaseHelper;
     private static ArrayList<String> IncomeArrayList,ExpenseArrayList;
     private Toolbar toolbar;
@@ -32,7 +32,6 @@ public class SettingsActivity extends AppCompatActivity {
         clearDataButton = findViewById(R.id.ClearDataButtonId);
         clearIncomeButton = findViewById(R.id.ClearIncomeButtonId);
         clearExpenseButton = findViewById(R.id.ClearExpenseButtonId);
-        removeUserButton = findViewById(R.id.ClearUserButtonId);
         databaseHelper = new DatabaseHelper(this);
 
         setSupportActionBar(toolbar);
@@ -134,51 +133,6 @@ public class SettingsActivity extends AppCompatActivity {
                         ExpenseArrayList.clear();
                         Preferences.setArrayPrefsAll("ExpenseList",ExpenseArrayList,SettingsActivity.this);
 
-                    }
-                });
-
-                builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.cancel();
-                    }
-                });
-
-                builder.show();
-
-            }
-        });
-
-        removeUserButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                final AlertDialog.Builder builder = new AlertDialog.Builder(SettingsActivity.this);
-
-                ///title
-                builder.setTitle("Alert Massage ");
-
-                /// message
-                builder.setMessage("Do you want to remove user?");
-
-                ///icon
-                builder.setIcon(getResources().getDrawable(R.drawable.question));
-
-                builder.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        databaseHelper.deleteAllUser();
-                        databaseHelper.deleteAllData();
-                        ExpenseArrayList = Preferences.getArrayPrefsAll("ExpenseList",SettingsActivity.this);
-                        ExpenseArrayList.clear();
-                        Preferences.setArrayPrefsAll("ExpenseList",ExpenseArrayList,SettingsActivity.this);
-                        IncomeArrayList = Preferences.getArrayPrefsAll("IncomeList",SettingsActivity.this);
-                        IncomeArrayList.clear();
-                        Preferences.setArrayPrefsAll("IncomeList",IncomeArrayList,SettingsActivity.this);
-
-                        Intent intent = new Intent(SettingsActivity.this, LoginActivity.class);
-                        startActivity(intent);
-                        MainActivity.mainActivity.finish();
-                        finish();
                     }
                 });
 

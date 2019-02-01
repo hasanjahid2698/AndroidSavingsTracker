@@ -52,16 +52,6 @@
             android:textSize="18sp"
             android:textColor="@color/colorBackground"
             android:background="@drawable/custom_button_style"/>
-        <Button
-            android:id="@+id/ClearUserButtonId"
-            android:layout_width="260dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="10dp"
-            android:textAllCaps="false"
-            android:text="@string/clearUserButtontext"
-            android:textSize="18sp"
-            android:textColor="@color/colorBackground"
-            android:background="@drawable/custom_button_style"/>
 
 
     </LinearLayout>

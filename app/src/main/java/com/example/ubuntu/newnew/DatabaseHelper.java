@@ -233,6 +233,16 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
+    public Integer updateUserData(Integer id ,UserDetails userDetails){
+        SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(USERNAME,userDetails.getUsername());
+        contentValues.put(Father_NAME,userDetails.getFatherName());
+        contentValues.put(Phonenumber,userDetails.getPhoneNumber());
+        contentValues.put(Password,userDetails.getPassword());
+        return sqLiteDatabase.update(TABLE_USER_NAME,contentValues,"id = ?",new String[] { Integer.toString(id) });
+    }
+
     public Integer deleteData(Integer id){
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         return sqLiteDatabase.delete(TABLE_NAME, "id = ? ",
@@ -249,6 +259,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase sqLiteDatabase = this.getWritableDatabase();
         sqLiteDatabase.execSQL("DELETE FROM "+TABLE_USER_NAME);
         sqLiteDatabase.close();
+    }
+
+    public ArrayList <UserDetails> findAllUser() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        ArrayList<UserDetails> results = new ArrayList<UserDetails>();
+
+        Cursor crs = db.rawQuery("select * from "+TABLE_USER_NAME, null);
+        while (crs.moveToNext()) {
+            UserDetails userDetails = new UserDetails();
+            userDetails.setId(crs.getInt(crs.getColumnIndex(ID)));
+            userDetails.setUsername(crs.getString(crs.getColumnIndex(USERNAME)));
+            userDetails.setFatherName(crs.getString(crs.getColumnIndex(Father_NAME)));
+            userDetails.setPhoneNumber(crs.getString(crs.getColumnIndex(Phonenumber)));
+            userDetails.setPassword(crs.getString(crs.getColumnIndex(Password)));
+            results.add(userDetails);
+        }
+
+        db.close();
+        return results;
     }
 
     public ArrayList <ListCollection> listfromdbondate() {
