@@ -30,4 +30,10 @@
     <string name="clearExpenseButtontext">Clear All Expense List</string>
     <string name="clearUserButtontext">Remove User</string>
     <string name="ProfilePasswordDivider">Change Your Password</string>
+    <string name="jahid">"Jahid Hasan"\n"hasanjahid2698@gmail.com"\n"'Try to be fine'"
+    </string>
+    <string name="safa">"        Sadia Jahangir Safa"\n"sadiajahangir.2397@gmail.com"\n"           'Be a good person'"
+    </string>
+    <string name="reaj">"          Rejaul Islam Reaj"\n"       mdreaj38@gmail.com"\n"                 'Attendre'"
+    </string>
 </resources>
