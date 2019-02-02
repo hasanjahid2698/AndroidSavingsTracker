@@ -8,7 +8,7 @@
     android:background="@drawable/rsz_b2"
     tools:context=".Credits">
 
-    
+
 
     <LinearLayout
         android:layout_width="match_parent"
