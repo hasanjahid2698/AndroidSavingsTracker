@@ -5,9 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/rsz_b2"
+    android:background="@mipmap/rsz_b2"
     tools:context=".Credits">
-
 
 
     <LinearLayout
@@ -19,7 +18,7 @@
             android:layout_marginLeft="0dp"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:src="@drawable/jahid"/>
+            android:src="@mipmap/jahid"/>
         <TextView
             android:id="@+id/j"
             android:layout_width="match_parent"
@@ -34,7 +33,7 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_marginTop="30dp"
-            android:src="@drawable/safa"/>
+            android:src="@mipmap/safa"/>
         <TextView
             android:id="@+id/s"
             android:layout_width="match_parent"
@@ -49,7 +48,7 @@
             android:layout_width="match_parent"
             android:layout_height="100dp"
             android:layout_marginTop="30dp"
-            android:src="@drawable/reaj"/>
+            android:src="@mipmap/reaj"/>
         <TextView
             android:id="@+id/r"
             android:layout_width="match_parent"
